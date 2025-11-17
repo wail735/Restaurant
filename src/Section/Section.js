@@ -1,4 +1,3 @@
-// Section.jsx
 import BookingForm from "./BookingForm";
 import { Box } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";

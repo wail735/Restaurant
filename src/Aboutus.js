@@ -17,10 +17,10 @@ export default function Aboutus() {
         <Typography
           sx={{
             position: "absolute",
-            top: { xs: "30%", md: "40%" }, // plus haut sur mobile
-            left: { xs: "40%", md: "20%" }, // ajuste la marge
+            top: { xs: "30%", md: "40%" }, 
+            left: { xs: "40%", md: "20%" }, 
             transform: "translateX(-50%)",
-            fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" }, // responsive
+            fontSize: { xs: "2rem", sm: "2.5rem", md: "4rem" }, 
             fontWeight: 500,
           }}
         >

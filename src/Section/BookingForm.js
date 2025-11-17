@@ -1,4 +1,3 @@
-// BookingForm.jsx
 import {
   Box,
   Button,

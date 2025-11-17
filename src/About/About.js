@@ -6,7 +6,7 @@ export default function About() {
     <Container
       maxWidth="lg"
       sx={{
-        mt: { xs: 8, md: 12 }, // فراغ أكبر لتفادي التراكب
+        mt: { xs: 8, md: 12 }, 
         position: "relative",
         zIndex: 1,
       }}

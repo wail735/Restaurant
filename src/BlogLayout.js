@@ -92,7 +92,7 @@ function SidebarSection({ title, children }) {
 
 export default function BlogLayout() {
   const [emailState, setEmailState] = useState({ email: "" });
-  const [searchQuery, setSearchQuery] = useState(""); // ✅ state للبحث
+  const [searchQuery, setSearchQuery] = useState(""); 
 
   // ✅ تصفية المقالات حسب الكلمة
   const filteredPosts = posts.filter((post) =>

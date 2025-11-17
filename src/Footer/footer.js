@@ -24,14 +24,12 @@ export default function Footer() {
     >
       <Box sx={{ py: 5 }}>
         <Container maxWidth="lg">
-          {/* الجزء العلوي */}
           <Box
             display="flex"
             flexDirection={{ xs: "column", md: "row" }}
             alignItems={{ xs: "center", md: "flex-start" }}
             gap={{ xs: 4, md: 8 }}
           >
-            {/* الشعار */}
             <Box sx={{ textAlign: { xs: "center", md: "left" } }}>
               <img
                 alt="Logo"
@@ -43,14 +41,12 @@ export default function Footer() {
               />
             </Box>
 
-            {/* الروابط */}
             <Box
               display="flex"
               flexDirection={{ xs: "column", sm: "row" }}
               gap={{ xs: 6, sm: 10, md: 14 }}
               textAlign={{ xs: "center", sm: "left" }}
             >
-              {/* Navigation */}
               <Box>
                 <Typography
                   variant="h6"
@@ -133,7 +129,6 @@ export default function Footer() {
             </Box>
           </Box>
 
-          {/* الجزء السفلي */}
           <Box
             mt={5}
             pt={3}
@@ -144,7 +139,6 @@ export default function Footer() {
             alignItems="center"
             sx={{ color: "#aaa", fontSize: "14px", textAlign: "center" }}
           >
-            {/* الحقوق */}
             <Typography sx={{ mb: { xs: 2, sm: 0 } }}>
               Copyright ©2025 All rights reserved | This template is made with{" "}
               <span style={{ color: "#ff5700" }}>❤️</span> by{" "}
@@ -162,7 +156,6 @@ export default function Footer() {
               </MuiLink>
             </Typography>
 
-            {/* أيقونات السوشيال ميديا */}
             <Box
               display="flex"
               gap={2}

@@ -28,7 +28,6 @@ export default function NavBar() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
 
-  // pages structure
   const pages = [
     { label: "Home", path: "/" },
     { label: "About", path: "/about" },
