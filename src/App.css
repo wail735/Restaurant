@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.active {
+  font-weight: bold;
+  backGround-color: #ff5600 !important;
+}
+
+
+/* App.css */
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* occupe toute la hauteur de l’écran */
+}
+
+.App main {
+  flex: 1; /* pousse le footer vers le bas */
+}
+
+
