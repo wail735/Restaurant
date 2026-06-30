@@ -4,7 +4,6 @@ import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 
-const MotionBox = motion(Box);
 const MotionTypography = motion(Typography);
 const MotionButton = motion(Button);
 
