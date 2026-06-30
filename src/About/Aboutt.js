@@ -1,6 +1,6 @@
 import React from "react";
 import { useTranslation } from "react-i18next";
-import { useTheme } from "@mui/material";
+
 
 export default function Aboutt() {
   const { t } = useTranslation();
