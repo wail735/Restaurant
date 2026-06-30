@@ -1,4 +1,4 @@
-﻿import { Typography } from "@mui/material";
+import { Typography, useTheme } from "@mui/material";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -6,36 +6,40 @@ import CardMedia from "@mui/material/CardMedia";
 import CardActionArea from "@mui/material/CardActionArea";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MotionCard = motion(Card);
 
-const blogs = [
-  {
-    id: 1,
-    image: "./assets/images/blog1.png.webp",
-    date: "June 15, 2025",
-    category: "Chef Secrets",
-    title: "The Art of Perfect Pasta: Tips from Our Head Chef",
-  },
-  {
-    id: 2,
-    image: "./assets/images/blog2.png.webp",
-    date: "May 28, 2025",
-    category: "Nutrition",
-    title: "Why Seasonal Eating Transforms Every Meal You Make",
-  },
-  {
-    id: 3,
-    image: "./assets/images/blog3.png.webp",
-    date: "April 10, 2025",
-    category: "Culture",
-    title: "Mediterranean Flavours: A Journey Through Tradition",
-  },
-];
-
 export default function Blog() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+
+  const blogs = [
+    {
+      id: 1,
+      image: "./assets/images/blog1.png.webp",
+      date: "June 15, 2025",
+      category: t('blog_cat1'),
+      title: t('blog_title1'),
+    },
+    {
+      id: 2,
+      image: "./assets/images/blog2.png.webp",
+      date: "May 28, 2025",
+      category: t('blog_cat2'),
+      title: t('blog_title2'),
+    },
+    {
+      id: 3,
+      image: "./assets/images/blog3.png.webp",
+      date: "April 10, 2025",
+      category: t('blog_cat3'),
+      title: t('blog_title3'),
+    },
+  ];
+
   return (
-    <div className="flex flex-col gap-4 justify-center items-center mt-20 pb-16 px-4">
+    <div className="flex flex-col gap-4 justify-center items-center mt-20 pb-16 px-4" style={{ backgroundColor: theme.palette.background.default }}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -44,18 +48,18 @@ export default function Blog() {
         style={{ textAlign: "center" }}
       >
         <Typography className="section-label" sx={{ mb: 1, display: "block" }}>
-          Our Latest Articles
+          {t('blog_label')}
         </Typography>
         <Typography
           sx={{
             fontFamily: "'Poppins', sans-serif",
             fontWeight: 800,
             fontSize: { xs: "1.9rem", md: "2.6rem" },
-            color: "#1e1e1e",
+            color: theme.palette.text.primary,
             mb: 6,
           }}
         >
-          From the King Food Kitchen
+          {t('blog_main_title')}
         </Typography>
       </motion.div>
 
@@ -75,7 +79,8 @@ export default function Blog() {
               borderRadius: "14px",
               overflow: "hidden",
               textDecoration: "none",
-              border: "1px solid rgba(0,0,0,0.07)",
+              bgcolor: theme.palette.background.paper,
+              border: `1px solid ${theme.palette.divider}`,
               boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
               transition: "all 0.35s ease",
               "&:hover": {
@@ -98,25 +103,39 @@ export default function Blog() {
                   sx={{
                     fontSize: "0.75rem",
                     fontWeight: 600,
-                    color: "#ff5600",
-                    mb: 0.75,
-                    letterSpacing: 1.5,
                     textTransform: "uppercase",
+                    letterSpacing: 1.2,
+                    color: "#ff5600",
+                    mb: 1.5,
                     fontFamily: "'Poppins', sans-serif",
                   }}
                 >
-                  {blog.category} &nbsp;Ã‚Â·&nbsp; {blog.date}
+                  {blog.category}
                 </Typography>
                 <Typography
                   sx={{
                     fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
-                    fontSize: "1.05rem",
-                    color: "#1e1e1e",
+                    fontSize: "1.1rem",
                     lineHeight: 1.4,
+                    color: theme.palette.text.primary,
+                    mb: 1.5,
                   }}
                 >
                   {blog.title}
+                </Typography>
+                <Typography
+                  sx={{
+                    color: theme.palette.text.secondary,
+                    fontSize: "0.8rem",
+                    fontWeight: 500,
+                    fontFamily: "'Poppins', sans-serif",
+                    display: "flex",
+                    alignItems: "center",
+                    gap: 1,
+                  }}
+                >
+                  <span>{blog.date}</span>
                 </Typography>
               </CardContent>
             </CardActionArea>
@@ -126,5 +145,3 @@ export default function Blog() {
     </div>
   );
 }
-
-

@@ -1,8 +1,9 @@
-﻿import React from "react";
+import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import { useTranslation } from "react-i18next";
 
 const MotionTypography = motion(Typography);
 const MotionButton = motion(Button);
@@ -19,6 +20,7 @@ const fadeUp = {
 
 export default function HeroSection() {
   const navigate = useNavigate();
+  const { t } = useTranslation();
 
   return (
     <Box
@@ -63,7 +65,7 @@ export default function HeroSection() {
             className="section-label"
             sx={{ mb: 2, display: "block", color: "#ff5600", letterSpacing: 3 }}
           >
-            Ã¢â‚¬â€ Discover Your Taste
+            {t('hero_label')}
           </MotionTypography>
 
           <MotionTypography
@@ -76,9 +78,10 @@ export default function HeroSection() {
               lineHeight: 1.15,
               mb: 3,
               textShadow: "0 2px 12px rgba(0,0,0,0.4)",
+              whiteSpace: "pre-line"
             }}
           >
-            Good Food,<br />Great Memories.
+            {t('hero_title')}
           </MotionTypography>
 
           <MotionTypography
@@ -92,8 +95,7 @@ export default function HeroSection() {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            At King Food, every plate tells a story Ã¢â‚¬â€ crafted from the finest
-            ingredients, cooked with passion, and served with warmth.
+            {t('hero_desc')}
           </MotionTypography>
 
           <Box sx={{ display: "flex", gap: 2, flexWrap: "wrap" }}>
@@ -116,7 +118,7 @@ export default function HeroSection() {
                 transition: "all 0.3s ease",
               }}
             >
-              Reserve a Table
+              {t('btn_reserve')}
             </MotionButton>
 
             <MotionButton
@@ -137,7 +139,7 @@ export default function HeroSection() {
                 transition: "all 0.3s ease",
               }}
             >
-              View Menu
+              {t('btn_view_menu')}
             </MotionButton>
           </Box>
         </motion.div>
@@ -162,12 +164,10 @@ export default function HeroSection() {
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
       >
         <Typography sx={{ fontSize: "0.7rem", letterSpacing: 2, textTransform: "uppercase", color: "inherit", fontFamily: "'Poppins', sans-serif" }}>
-          Scroll
+          {t('scroll')}
         </Typography>
         <KeyboardArrowDownIcon fontSize="small" />
       </Box>
     </Box>
   );
 }
-
-

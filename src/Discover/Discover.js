@@ -1,5 +1,6 @@
-﻿import { Container, Typography, Box } from "@mui/material";
+import { Container, Typography, Box, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const MotionBox = motion(Box);
 
@@ -12,34 +13,37 @@ const fadeUp = {
   }),
 };
 
-const features = [
-  {
-    id: 1,
-    icon: "./assets/images/cooking.png",
-    title: "Fresh Ingredients",
-    description: "Sourced daily from local farms to guarantee peak flavour and nutrition in every dish.",
-  },
-  {
-    id: 2,
-    icon: "./assets/images/stir-fry.png",
-    title: "Expert Chefs",
-    description: "Our award-winning chefs bring decades of culinary mastery from kitchens across the world.",
-  },
-  {
-    id: 3,
-    icon: "./assets/images/chef.png",
-    title: "Family Recipes",
-    description: "Time-honoured recipes passed down through generations, served with modern presentation.",
-  },
-  {
-    id: 4,
-    icon: "./assets/images/cooking.png",
-    title: "Quick & Reliable",
-    description: "Seamless service from reservation to the last bite Ã¢â‚¬â€ your time is always respected.",
-  },
-];
-
 export default function Discover() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+  
+  const features = [
+    {
+      id: 1,
+      icon: "./assets/images/cooking.png",
+      title: t('feat1_title'),
+      description: t('feat1_desc'),
+    },
+    {
+      id: 2,
+      icon: "./assets/images/stir-fry.png",
+      title: t('feat2_title'),
+      description: t('feat2_desc'),
+    },
+    {
+      id: 3,
+      icon: "./assets/images/chef.png",
+      title: t('feat3_title'),
+      description: t('feat3_desc'),
+    },
+    {
+      id: 4,
+      icon: "./assets/images/cooking.png",
+      title: t('feat4_title'),
+      description: t('feat4_desc'),
+    },
+  ];
+
   return (
     <Box
       sx={{
@@ -48,7 +52,7 @@ export default function Discover() {
         alignItems: "center",
         px: 2,
         py: { xs: 8, md: 4 },
-        bgcolor: "#fffbf7",
+        bgcolor: theme.palette.background.default,
       }}
     >
       <Container maxWidth="lg">
@@ -75,7 +79,7 @@ export default function Discover() {
                 className="section-label"
                 sx={{ mb: 2 }}
               >
-                Discover Your Taste
+                {t('hero_label')}
               </Typography>
 
               <Typography
@@ -86,12 +90,13 @@ export default function Discover() {
                   fontFamily: "'Poppins', sans-serif",
                   fontWeight: 800,
                   fontSize: { xs: "2rem", md: "2.8rem" },
-                  color: "#1e1e1e",
+                  color: theme.palette.text.primary,
                   lineHeight: 1.2,
                   mb: 2,
+                  whiteSpace: "pre-line"
                 }}
               >
-                We Provide Good Food<br />For Your Family
+                {t('discover_title')}
               </Typography>
 
               <Typography
@@ -100,16 +105,14 @@ export default function Discover() {
                 variants={fadeUp}
                 sx={{
                   maxWidth: "520px",
-                  color: "#6b7280",
+                  color: theme.palette.text.secondary,
                   mb: 5,
                   lineHeight: 1.85,
                   fontFamily: "'Poppins', sans-serif",
                   fontSize: "1rem",
                 }}
               >
-                At King Food, we believe a great meal is more than food Ã¢â‚¬â€ it is a
-                shared experience. Every ingredient, every technique, every moment
-                at our table is crafted with care.
+                {t('discover_desc')}
               </Typography>
 
               {/* Feature grid */}
@@ -135,7 +138,7 @@ export default function Discover() {
                       p: 2,
                       borderRadius: "12px",
                       transition: "background 0.3s ease",
-                      "&:hover": { backgroundColor: "#fff5ed" },
+                      "&:hover": { backgroundColor: theme.palette.mode === 'dark' ? 'rgba(255,255,255,0.05)' : "#fff5ed" },
                     }}
                   >
                     <img
@@ -150,14 +153,14 @@ export default function Discover() {
                           fontWeight: 700,
                           fontSize: "0.95rem",
                           mb: 0.4,
-                          color: "#1e1e1e",
+                          color: theme.palette.text.primary,
                           fontFamily: "'Poppins', sans-serif",
                         }}
                       >
                         {feat.title}
                       </Typography>
                       <Typography
-                        sx={{ color: "#6b7280", fontSize: "0.875rem", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}
+                        sx={{ color: theme.palette.text.secondary, fontSize: "0.875rem", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}
                       >
                         {feat.description}
                       </Typography>
@@ -197,5 +200,3 @@ export default function Discover() {
     </Box>
   );
 }
-
-

@@ -1,4 +1,4 @@
-﻿import {
+import {
   Box,
   Button,
   MenuItem,
@@ -10,6 +10,7 @@
   Typography,
   Alert,
   Collapse,
+  useTheme
 } from "@mui/material";
 import {
   LocalizationProvider,
@@ -22,27 +23,32 @@ import PersonIcon from "@mui/icons-material/Person";
 import EventIcon from "@mui/icons-material/Event";
 import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
-
-const tableOptions = [
-  { id: 1, name: "Window Table", description: "Enjoy a scenic view while you dine.", img: "./assets/images/table-01.jpg" },
-  { id: 2, name: "Outdoor Terrace", description: "Al fresco dining in the open air.", img: "./assets/images/table-02.webp" },
-  { id: 3, name: "VIP Private Room", description: "Exclusive ambiance for special occasions.", img: "./assets/images/table-03.jpg" },
-];
-
-const fieldStyle = {
-  height: "56px",
-  fontSize: "16px",
-  backgroundColor: "#fff",
-  borderRadius: "10px",
-};
+import { useTranslation } from "react-i18next";
 
 export default function BookingForm() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+
   const [person, setPerson] = useState("");
   const [date, setDate] = useState(null);
   const [time, setTime] = useState(null);
   const [showCards, setShowCards] = useState(false);
   const [selectedCard, setSelectedCard] = useState(null);
   const [confirmed, setConfirmed] = useState(false);
+
+  const tableOptions = [
+    { id: 1, name: t('table1_name'), description: t('table1_desc'), img: "./assets/images/table-01.jpg" },
+    { id: 2, name: t('table2_name'), description: t('table2_desc'), img: "./assets/images/table-02.webp" },
+    { id: 3, name: t('table3_name'), description: t('table3_desc'), img: "./assets/images/table-03.jpg" },
+  ];
+
+  const fieldStyle = {
+    height: "56px",
+    fontSize: "16px",
+    backgroundColor: theme.palette.background.paper,
+    color: theme.palette.text.primary,
+    borderRadius: "10px",
+  };
 
   const isFormComplete = person && date && time;
 
@@ -84,12 +90,12 @@ export default function BookingForm() {
               }
               sx={{ ...fieldStyle, flex: 1, minWidth: { xs: "100%", sm: "180px" } }}
             >
-              <MenuItem value="">Guests</MenuItem>
-              <MenuItem value="1">1 Person</MenuItem>
-              <MenuItem value="2">2 Persons</MenuItem>
-              <MenuItem value="3">3 Persons</MenuItem>
-              <MenuItem value="4">4 Persons</MenuItem>
-              <MenuItem value="5+">5+ Persons</MenuItem>
+              <MenuItem value="">{t('guests')}</MenuItem>
+              <MenuItem value="1">1 {t('person')}</MenuItem>
+              <MenuItem value="2">2 {t('persons')}</MenuItem>
+              <MenuItem value="3">3 {t('persons')}</MenuItem>
+              <MenuItem value="4">4 {t('persons')}</MenuItem>
+              <MenuItem value="5+">5+ {t('persons')}</MenuItem>
             </Select>
 
             <DatePicker
@@ -122,8 +128,9 @@ export default function BookingForm() {
               onClick={handleSubmit}
               sx={{
                 bgcolor: "#ff5600",
+                color: "#fff",
                 "&:hover": { bgcolor: "#e04a00" },
-                "&:disabled": { bgcolor: "#ccc" },
+                "&:disabled": { bgcolor: theme.palette.action.disabledBackground, color: theme.palette.action.disabled },
                 fontWeight: 700,
                 fontFamily: "'Poppins', sans-serif",
                 flex: 1,
@@ -134,7 +141,7 @@ export default function BookingForm() {
                 fontSize: "1rem",
               }}
             >
-              Find a Table
+              {t('btn_find_table')}
             </Button>
           </Box>
         )}
@@ -142,8 +149,8 @@ export default function BookingForm() {
         {/* Step 2: table selection */}
         {showCards && !confirmed && (
           <Box>
-            <Typography sx={{ mb: 3, fontFamily: "'Poppins', sans-serif", color: "#6b7280", textAlign: "center" }}>
-              Choose your preferred table Ã¢â‚¬â€ {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}
+            <Typography sx={{ mb: 3, fontFamily: "'Poppins', sans-serif", color: theme.palette.text.secondary, textAlign: "center", bgcolor: theme.palette.background.paper, p: 2, borderRadius: 2 }}>
+              {t('choose_table')} — {date?.format("MMM D, YYYY")} {t('at')} {time?.format("h:mm A")} {t('for')} {person} {person !== "1" ? t('persons') : t('person')}
             </Typography>
             <Box
               display="grid"
@@ -157,17 +164,18 @@ export default function BookingForm() {
                   sx={{
                     cursor: "pointer",
                     borderRadius: "14px",
-                    border: selectedCard?.id === table.id ? "2px solid #ff5600" : "1.5px solid rgba(0,0,0,0.08)",
+                    bgcolor: theme.palette.background.paper,
+                    border: selectedCard?.id === table.id ? "2px solid #ff5600" : `1.5px solid ${theme.palette.divider}`,
                     transition: "all 0.3s ease",
                     "&:hover": { boxShadow: "0 8px 24px rgba(255,86,0,0.15)", transform: "translateY(-4px)" },
                   }}
                 >
                   <CardMedia component="img" image={table.img} alt={table.name} sx={{ aspectRatio: "4/3", objectFit: "cover" }} />
                   <CardContent>
-                    <Typography sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1rem", mb: 0.5 }}>
+                    <Typography sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1rem", mb: 0.5, color: theme.palette.text.primary }}>
                       {table.name}
                     </Typography>
-                    <Typography sx={{ color: "#6b7280", fontSize: "0.85rem", fontFamily: "'Poppins', sans-serif" }}>
+                    <Typography sx={{ color: theme.palette.text.secondary, fontSize: "0.85rem", fontFamily: "'Poppins', sans-serif" }}>
                       {table.description}
                     </Typography>
                   </CardContent>
@@ -175,8 +183,8 @@ export default function BookingForm() {
               ))}
             </Box>
             <Box sx={{ textAlign: "center", mt: 3 }}>
-              <Button onClick={handleReset} sx={{ color: "#6b7280", textTransform: "none", fontFamily: "'Poppins', sans-serif" }}>
-                Ã¢â€ Â Start Over
+              <Button onClick={handleReset} sx={{ color: theme.palette.text.secondary, textTransform: "none", fontFamily: "'Poppins', sans-serif", bgcolor: theme.palette.background.paper }}>
+                {t('start_over')}
               </Button>
             </Box>
           </Box>
@@ -185,7 +193,7 @@ export default function BookingForm() {
         {/* Step 3: confirmation */}
         <Collapse in={confirmed}>
           {selectedCard && (
-            <Box sx={{ textAlign: "center", py: 4 }}>
+            <Box sx={{ textAlign: "center", py: 4, bgcolor: theme.palette.background.paper, borderRadius: 3, mt: 2 }}>
               <CheckCircleOutlineIcon sx={{ fontSize: 56, color: "#ff5600", mb: 2 }} />
               <Alert
                 severity="success"
@@ -193,15 +201,15 @@ export default function BookingForm() {
                   borderRadius: "12px",
                   mb: 2,
                   fontFamily: "'Poppins', sans-serif",
-                  bgcolor: "#fff5ed",
+                  bgcolor: theme.palette.mode === 'dark' ? "rgba(255,86,0,0.1)" : "#fff5ed",
                   border: "1px solid #ff5600",
-                  color: "#1e1e1e",
+                  color: theme.palette.text.primary,
                   "& .MuiAlert-icon": { color: "#ff5600" },
                 }}
               >
-                <strong>Reservation confirmed!</strong> {selectedCard.name} on{" "}
-                {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}.
-                We look forward to seeing you at King Food!
+                <strong>{t('reservation_confirmed')}</strong> {selectedCard.name} {t('on')}{" "}
+                {date?.format("MMM D, YYYY")} {t('at')} {time?.format("h:mm A")} {t('for')} {person} {person !== "1" ? t('persons') : t('person')}.
+                <br/>{t('look_forward')}
               </Alert>
               <Button
                 onClick={handleReset}
@@ -217,7 +225,7 @@ export default function BookingForm() {
                   "&:hover": { bgcolor: "#ff5600", color: "#fff" },
                 }}
               >
-                Make Another Reservation
+                {t('make_another')}
               </Button>
             </Box>
           )}
@@ -226,5 +234,3 @@ export default function BookingForm() {
     </div>
   );
 }
-
-

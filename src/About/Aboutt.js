@@ -1,51 +1,56 @@
-import { motion } from "framer-motion";
+import React from "react";
+import { useTranslation } from "react-i18next";
+import { useTheme } from "@mui/material";
 
 export default function Aboutt() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+
   return (
     <div
-      className="relative w-full h-[500px] mt-20 bg-cover bg-center grid grid-cols-1 md:grid-cols-2 items-center"
-      style={{ backgroundImage: "url('./assets/images/section_bg03.png')" }}
+      style={{
+        width: "100%",
+        minHeight: "450px",
+        backgroundImage: "url('./assets/images/about.jpg')",
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundAttachment: "fixed",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
+        position: "relative",
+      }}
     >
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-black bg-opacity-35" />
+      <div
+        style={{
+          position: "absolute",
+          inset: 0,
+          backgroundColor: "rgba(0, 0, 0, 0.65)",
+        }}
+      ></div>
 
-      <div />
-
-      <motion.div
-        initial={{ opacity: 0, x: 40 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.65, ease: "easeOut" }}
-        className="relative z-10 px-6 md:px-16 max-w-lg"
-      >
-        <p className="section-label" style={{ color: "#ff5600" }}>
-          Stay in the Loop
-        </p>
-        <h2 className="text-3xl md:text-4xl font-bold leading-snug mt-2 text-white"
-            style={{ fontFamily: "'Poppins', sans-serif" }}>
-          Get Exclusive Offers<br />Delivered to You
+      <div style={{ position: "relative", zIndex: 1, textAlign: "center", maxWidth: "800px", padding: "0 20px" }}>
+        <h2
+          className="text-4xl md:text-5xl font-bold text-white mb-6"
+          style={{ fontFamily: "'Poppins', sans-serif" }}>
+          {t('aboutt_title')}
         </h2>
         <p className="mt-4 text-gray-200" style={{ fontFamily: "'Poppins', sans-serif", lineHeight: 1.75 }}>
-          Subscribe to our newsletter and be the first to know about seasonal
-          menus, special events, and members-only promotions.
+          {t('aboutt_desc')}
         </p>
 
-        <div className="flex mt-6 rounded-lg overflow-hidden shadow-lg">
-          <input
-            type="email"
-            placeholder="Your email address"
-            className="px-4 py-3 w-full border-0 focus:outline-none text-gray-800"
-            style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.95rem" }}
-          />
-          <button
-            className="bg-orange-500 text-white px-6 font-semibold hover:bg-orange-600 transition-colors duration-300 whitespace-nowrap"
-            style={{ fontFamily: "'Poppins', sans-serif" }}
-          >
-            Subscribe
-          </button>
+        <div className="mt-8 flex justify-center gap-6">
+          <div className="text-center">
+            <h3 className="text-3xl font-bold" style={{ color: "#ff5600" }}>4.8/5</h3>
+            <p className="text-gray-300 mt-1" style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.95rem" }}>{t('aboutt_rating')}</p>
+          </div>
+          <div className="w-px bg-gray-600"></div>
+          <div className="text-center">
+            <h3 className="text-3xl font-bold" style={{ color: "#ff5600" }}>30+</h3>
+            <p className="text-gray-300 mt-1" style={{ fontFamily: "'Poppins', sans-serif" }}>{t('aboutt_awards')}</p>
+          </div>
         </div>
-      </motion.div>
+      </div>
     </div>
   );
 }
-

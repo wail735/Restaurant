@@ -1,5 +1,6 @@
-﻿import { Container, Typography, Box, Button } from "@mui/material";
+import { Container, Typography, Box, Button, useTheme } from "@mui/material";
 import { motion } from "framer-motion";
+import { useTranslation } from "react-i18next";
 
 const fadeLeft = {
   hidden: { opacity: 0, x: -40 },
@@ -18,13 +19,16 @@ const fadeUp = {
   }),
 };
 
-const stats = [
-  { value: "15+", label: "Years of Excellence" },
-  { value: "200+", label: "Signature Dishes" },
-  { value: "5K+", label: "Happy Guests" },
-];
-
 export default function About() {
+  const { t } = useTranslation();
+  const theme = useTheme();
+
+  const stats = [
+    { value: "15+", label: t('stat1_label') },
+    { value: "200+", label: t('stat2_label') },
+    { value: "5K+", label: t('stat3_label') },
+  ];
+
   return (
     <Container
       maxWidth="lg"
@@ -71,7 +75,7 @@ export default function About() {
               className="section-label"
               sx={{ mb: 1.5, display: "block" }}
             >
-              About Our Restaurant
+              {t('about_label')}
             </Typography>
 
             <Typography
@@ -81,27 +85,22 @@ export default function About() {
                 fontSize: { xs: "1.9rem", md: "2.6rem" },
                 lineHeight: 1.2,
                 mb: 3,
-                color: "#1e1e1e",
+                color: theme.palette.text.primary,
               }}
             >
-              A Passion for Food, A Love for People
+              {t('about_title')}
             </Typography>
 
             <Typography
-              sx={{ color: "#6b7280", mb: 2, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
+              sx={{ color: theme.palette.text.secondary, mb: 2, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
-              Founded in 2009, King Food was born from a simple belief: that food
-              should bring people together. Our kitchen blends time-honoured
-              Mediterranean traditions with modern culinary artistry, creating
-              dishes that comfort the soul and delight the palate.
+              {t('about_desc1')}
             </Typography>
 
             <Typography
-              sx={{ color: "#6b7280", mb: 4, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
+              sx={{ color: theme.palette.text.secondary, mb: 4, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
-              Every recipe we serve carries the story of its origin Ã¢â‚¬â€ sourced from
-              local farmers, prepared by passionate chefs, and presented to guests
-              who deserve nothing less than the extraordinary.
+              {t('about_desc2')}
             </Typography>
 
             {/* Stats row */}
@@ -122,6 +121,7 @@ export default function About() {
                   whileInView="visible"
                   viewport={{ once: true }}
                   className="stat-card"
+                  style={{ backgroundColor: theme.palette.background.paper }}
                 >
                   <Typography
                     sx={{
@@ -136,7 +136,7 @@ export default function About() {
                     {s.value}
                   </Typography>
                   <Typography
-                    sx={{ color: "#6b7280", fontSize: "0.8rem", fontFamily: "'Poppins', sans-serif" }}
+                    sx={{ color: theme.palette.text.secondary, fontSize: "0.8rem", fontFamily: "'Poppins', sans-serif" }}
                   >
                     {s.label}
                   </Typography>
@@ -164,7 +164,7 @@ export default function About() {
                 },
               }}
             >
-              Explore Our Menu
+              {t('btn_explore_menu')}
             </Button>
           </Box>
         </motion.div>
@@ -172,5 +172,3 @@ export default function About() {
     </Container>
   );
 }
-
-

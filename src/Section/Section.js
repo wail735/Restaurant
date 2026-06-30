@@ -1,8 +1,10 @@
-﻿import BookingForm from "./BookingForm";
+import BookingForm from "./BookingForm";
 import { Box } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
 export default function Section() {
+  const { t } = useTranslation();
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
 
@@ -41,7 +43,7 @@ export default function Section() {
         style={{
           position: isMobile ? "relative" : "absolute",
           inset: isMobile ? "unset" : 0,
-          backgroundColor: isMobile ? "#fff5ed" : "transparent",
+          backgroundColor: isMobile ? theme.palette.background.paper : "transparent",
           borderRadius: isMobile ? "12px" : "0px",
         }}
       >
@@ -49,19 +51,19 @@ export default function Section() {
           className="section-label"
           style={{ color: "#ff5600", marginBottom: 8 }}
         >
-          About Our Restaurant
+          {t('booking_label')}
         </p>
         <p
           style={{
             fontFamily: "'Poppins', sans-serif",
             fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 800,
-            color: isMobile ? "#1e1e1e" : "#fff",
+            color: isMobile ? theme.palette.text.primary : "#fff",
             marginTop: 4,
             marginBottom: 24,
           }}
         >
-          Book A Table
+          {t('booking_title')}
         </p>
 
         <div className="mt-2 w-full max-w-5xl">
@@ -71,5 +73,3 @@ export default function Section() {
     </div>
   );
 }
-
-
