@@ -25,7 +25,7 @@ const services = [
     icon: "./assets/images/stir-fry.png",
     title: "Premium Quality Food",
     description:
-      "We partner with certified local producers to source only the freshest, seasonal ingredients — because great flavour starts long before the kitchen.",
+      "We partner with certified local producers to source only the freshest, seasonal ingredients â€” because great flavour starts long before the kitchen.",
   },
   {
     id: 3,
@@ -51,7 +51,7 @@ export default function Service() {
         </Typography>
         <Typography
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontWeight: 800,
             fontSize: { xs: "1.9rem", md: "2.6rem" },
             color: "#1e1e1e",
@@ -111,7 +111,7 @@ export default function Service() {
             </Box>
             <Typography
               sx={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: "1.1rem",
                 mb: 1.5,
@@ -121,7 +121,7 @@ export default function Service() {
               {service.title}
             </Typography>
             <Typography
-              sx={{ color: "#6b7280", fontSize: "0.92rem", lineHeight: 1.75, fontFamily: "'Inter', sans-serif" }}
+              sx={{ color: "#6b7280", fontSize: "0.92rem", lineHeight: 1.75, fontFamily: "'Poppins', sans-serif" }}
             >
               {service.description}
             </Typography>
@@ -131,3 +131,4 @@ export default function Service() {
     </div>
   );
 }
+

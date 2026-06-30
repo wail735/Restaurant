@@ -53,7 +53,7 @@ export default function Section() {
         </p>
         <p
           style={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: "clamp(1.8rem, 3.5vw, 2.6rem)",
             fontWeight: 800,
             color: isMobile ? "#1e1e1e" : "#fff",
@@ -71,3 +71,4 @@ export default function Section() {
     </div>
   );
 }
+

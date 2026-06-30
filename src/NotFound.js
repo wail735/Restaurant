@@ -24,7 +24,7 @@ export default function NotFound() {
       >
         <Typography
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontSize: { xs: "6rem", md: "10rem" },
             fontWeight: 800,
             color: "#ff5600",
@@ -37,7 +37,7 @@ export default function NotFound() {
         <Typography
           variant="h4"
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontWeight: 700,
             mb: 2,
             color: "#1e1e1e",
@@ -69,3 +69,4 @@ export default function NotFound() {
     </Box>
   );
 }
+

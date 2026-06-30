@@ -19,7 +19,7 @@ export default function Aboutus() {
           <Typography
             component="h1"
             sx={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 800,
               fontSize: { xs: "2rem", sm: "2.5rem", md: "3.5rem" },
               color: "#fff",
@@ -38,3 +38,4 @@ export default function Aboutus() {
     </div>
   );
 }
+

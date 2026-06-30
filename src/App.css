@@ -18,7 +18,7 @@
   flex: 1;
 }
 
-/* ── Page Transition ── */
+/* â”€â”€ Page Transition â”€â”€ */
 .page-enter {
   opacity: 0;
   transform: translateY(16px);
@@ -36,7 +36,7 @@
   transition: opacity 0.25s ease;
 }
 
-/* ── Stat counter row ── */
+/* â”€â”€ Stat counter row â”€â”€ */
 .stat-card {
   text-align: center;
   padding: 1.5rem 2rem;
@@ -50,7 +50,7 @@
   box-shadow: 0 8px 24px rgba(255,86,0,0.15);
 }
 
-/* ── Hero scroll indicator ── */
+/* â”€â”€ Hero scroll indicator â”€â”€ */
 @keyframes bounceDown {
   0%, 100% { transform: translateY(0); }
   50% { transform: translateY(8px); }
@@ -59,12 +59,13 @@
   animation: bounceDown 1.8s ease-in-out infinite;
 }
 
-/* ── Section label ── */
+/* â”€â”€ Section label â”€â”€ */
 .section-label {
-  font-family: 'Inter', sans-serif;
+  font-family: 'Poppins', sans-serif;
   font-size: 0.85rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-transform: uppercase;
   color: #ff5600;
 }
+

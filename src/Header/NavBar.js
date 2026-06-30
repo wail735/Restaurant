@@ -79,7 +79,7 @@ export default function NavBar() {
               component={NavLink}
               to="/"
               sx={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 700,
                 fontSize: "1.35rem",
                 color: textColor,
@@ -107,7 +107,7 @@ export default function NavBar() {
                         color: textColor,
                         fontWeight: 500,
                         fontSize: "0.92rem",
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         textTransform: "none",
                         px: 1.5,
                         transition: "color 0.35s ease, background 0.3s ease",
@@ -133,7 +133,7 @@ export default function NavBar() {
                         textTransform: "none",
                         fontWeight: 500,
                         fontSize: "0.92rem",
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         px: 1.5,
                         transition: "color 0.35s ease",
                         "&:hover": { backgroundColor: "#ff5600", color: "#fff", borderRadius: "6px" },
@@ -162,7 +162,7 @@ export default function NavBar() {
                           to={child.path}
                           onClick={handleCloseBlogMenu}
                           sx={{
-                            fontFamily: "'Inter', sans-serif",
+                            fontFamily: "'Poppins', sans-serif",
                             fontSize: "0.92rem",
                             "&.active": { backgroundColor: "#ff5600", color: "#fff" },
                             "&:hover": { backgroundColor: "#fff5ed" },
@@ -188,7 +188,7 @@ export default function NavBar() {
                   py: 1,
                   fontSize: "0.9rem",
                   fontWeight: 600,
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   letterSpacing: "0.5px",
                   transition: "all 0.3s ease",
                   "&:hover": { backgroundColor: "#ff5600", color: "#fff", borderColor: "#ff5600" },
@@ -231,7 +231,7 @@ export default function NavBar() {
                         component={NavLink}
                         to={page.path}
                         sx={{
-                          fontFamily: "'Inter', sans-serif",
+                          fontFamily: "'Poppins', sans-serif",
                           "&.active": { backgroundColor: "#ff5600", color: "#fff" },
                           "&:hover": { backgroundColor: "#fff5ed" },
                         }}
@@ -244,7 +244,7 @@ export default function NavBar() {
                   return (
                     <Box key={page.label}>
                       <MenuItem onClick={() => setOpenBlogMobile(!openBlogMobile)}>
-                        <Typography sx={{ flexGrow: 1, fontFamily: "'Inter', sans-serif" }}>
+                        <Typography sx={{ flexGrow: 1, fontFamily: "'Poppins', sans-serif" }}>
                           {page.label}
                         </Typography>
                         {openBlogMobile ? <ExpandLessIcon /> : <ExpandMoreIcon />}
@@ -258,7 +258,7 @@ export default function NavBar() {
                             to={child.path}
                             sx={{
                               pl: 4,
-                              fontFamily: "'Inter', sans-serif",
+                              fontFamily: "'Poppins', sans-serif",
                               fontSize: "0.875rem",
                               "&.active": { backgroundColor: "#ff5600", color: "#fff" },
                             }}
@@ -284,7 +284,7 @@ export default function NavBar() {
                       py: 0.75,
                       borderRadius: "8px",
                       fontWeight: 600,
-                      fontFamily: "'Inter', sans-serif",
+                      fontFamily: "'Poppins', sans-serif",
                       "&:hover": { backgroundColor: "#ff5600", color: "#fff" },
                     }}
                   >
@@ -299,3 +299,4 @@ export default function NavBar() {
     </div>
   );
 }
+

@@ -58,7 +58,7 @@ export default function Footer() {
                   />
                   <Typography
                     sx={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "'Poppins', sans-serif",
                       fontWeight: 700,
                       fontSize: "1.4rem",
                       color: "#fff",
@@ -68,7 +68,7 @@ export default function Footer() {
                     Savoria
                   </Typography>
                 </Box>
-                <Typography sx={{ color: "#aaa", fontSize: "0.875rem", lineHeight: 1.75, fontFamily: "'Inter', sans-serif" }}>
+                <Typography sx={{ color: "#aaa", fontSize: "0.875rem", lineHeight: 1.75, fontFamily: "'Poppins', sans-serif" }}>
                   Fine dining crafted with passion. Every plate tells a story of fresh ingredients, expert technique, and a love for good food.
                 </Typography>
 
@@ -111,7 +111,7 @@ export default function Footer() {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
+                    sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
                   >
                     Navigation
                   </Typography>
@@ -125,7 +125,7 @@ export default function Footer() {
                         textDecoration: "none",
                         display: "block",
                         mb: 0.75,
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         fontSize: "0.9rem",
                         transition: "color 0.3s ease",
                         "&:hover": { color: "#ff5600" },
@@ -140,7 +140,7 @@ export default function Footer() {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
+                    sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
                   >
                     Quick Links
                   </Typography>
@@ -154,7 +154,7 @@ export default function Footer() {
                         textDecoration: "none",
                         display: "block",
                         mb: 0.75,
-                        fontFamily: "'Inter', sans-serif",
+                        fontFamily: "'Poppins', sans-serif",
                         fontSize: "0.9rem",
                         transition: "color 0.3s ease",
                         "&:hover": { color: "#ff5600" },
@@ -169,7 +169,7 @@ export default function Footer() {
                   <Typography
                     variant="h6"
                     gutterBottom
-                    sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
+                    sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1.05rem", mb: 2 }}
                   >
                     Instagram
                   </Typography>
@@ -189,11 +189,11 @@ export default function Footer() {
               alignItems="center"
               sx={{ color: "#777", fontSize: "0.85rem", textAlign: "center", pb: 3 }}
             >
-              <Typography sx={{ mb: { xs: 1.5, sm: 0 }, fontFamily: "'Inter', sans-serif", fontSize: "0.85rem" }}>
+              <Typography sx={{ mb: { xs: 1.5, sm: 0 }, fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
                 &copy; {new Date().getFullYear()} Savoria Restaurant. All rights reserved.
               </Typography>
-              <Typography sx={{ fontFamily: "'Inter', sans-serif", fontSize: "0.85rem" }}>
-                Crafted with <span style={{ color: "#ff5600" }}>❤</span> for great dining experiences.
+              <Typography sx={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
+                Crafted with <span style={{ color: "#ff5600" }}>â¤</span> for great dining experiences.
               </Typography>
             </Box>
           </Container>
@@ -202,3 +202,4 @@ export default function Footer() {
     </footer>
   );
 }
+

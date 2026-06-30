@@ -63,13 +63,13 @@ export default function HeroSection() {
             className="section-label"
             sx={{ mb: 2, display: "block", color: "#ff5600", letterSpacing: 3 }}
           >
-            — Discover Your Taste
+            â€” Discover Your Taste
           </MotionTypography>
 
           <MotionTypography
             variants={fadeUp}
             sx={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 800,
               fontSize: { xs: "2.4rem", sm: "3rem", md: "4rem" },
               color: "#fff",
@@ -89,10 +89,10 @@ export default function HeroSection() {
               lineHeight: 1.8,
               mb: 4,
               maxWidth: 460,
-              fontFamily: "'Inter', sans-serif",
+              fontFamily: "'Poppins', sans-serif",
             }}
           >
-            At Savoria, every plate tells a story — crafted from the finest
+            At Savoria, every plate tells a story â€” crafted from the finest
             ingredients, cooked with passion, and served with warmth.
           </MotionTypography>
 
@@ -110,7 +110,7 @@ export default function HeroSection() {
                 borderRadius: "10px",
                 fontWeight: 700,
                 fontSize: "1rem",
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 boxShadow: "0 6px 20px rgba(255,86,0,0.45)",
                 "&:hover": { backgroundColor: "#e04a00", transform: "translateY(-2px)" },
                 transition: "all 0.3s ease",
@@ -132,7 +132,7 @@ export default function HeroSection() {
                 borderRadius: "10px",
                 fontWeight: 600,
                 fontSize: "1rem",
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 "&:hover": { borderColor: "#ff5600", color: "#ff5600", backgroundColor: "rgba(255,86,0,0.08)" },
                 transition: "all 0.3s ease",
               }}
@@ -161,7 +161,7 @@ export default function HeroSection() {
         }}
         onClick={() => window.scrollTo({ top: window.innerHeight, behavior: "smooth" })}
       >
-        <Typography sx={{ fontSize: "0.7rem", letterSpacing: 2, textTransform: "uppercase", color: "inherit", fontFamily: "'Inter', sans-serif" }}>
+        <Typography sx={{ fontSize: "0.7rem", letterSpacing: 2, textTransform: "uppercase", color: "inherit", fontFamily: "'Poppins', sans-serif" }}>
           Scroll
         </Typography>
         <KeyboardArrowDownIcon fontSize="small" />
@@ -169,3 +169,4 @@ export default function HeroSection() {
     </Box>
   );
 }
+

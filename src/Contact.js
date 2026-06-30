@@ -17,13 +17,13 @@ const infoItems = [
     icon: <Home sx={{ color: "#ff5600", fontSize: 28 }} />,
     label: "Visit Us",
     line1: "12 Rue des Oliviers, Blida",
-    line2: "Algérie, 09000",
+    line2: "AlgÃ©rie, 09000",
   },
   {
     icon: <Phone sx={{ color: "#ff5600", fontSize: 28 }} />,
     label: "Call Us",
     line1: "+213 25 30 40 50",
-    line2: "Mon – Fri, 10 AM – 10 PM",
+    line2: "Mon â€“ Fri, 10 AM â€“ 10 PM",
   },
   {
     icon: <Email sx={{ color: "#ff5600", fontSize: 28 }} />,
@@ -74,7 +74,7 @@ export default function Contact() {
             <p className="section-label" style={{ color: "#ff5600", marginBottom: 8 }}>Get in Touch</p>
             <h1
               style={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 800,
                 fontSize: "clamp(2rem, 5vw, 3.5rem)",
                 color: "#fff",
@@ -127,14 +127,14 @@ export default function Contact() {
               <Box sx={{ mt: 0.3 }}>{item.icon}</Box>
               <Box>
                 <Typography
-                  sx={{ fontWeight: 700, fontFamily: "'Playfair Display', serif", fontSize: "1rem", mb: 0.3 }}
+                  sx={{ fontWeight: 700, fontFamily: "'Poppins', sans-serif", fontSize: "1rem", mb: 0.3 }}
                 >
                   {item.label}
                 </Typography>
-                <Typography sx={{ color: "#1e1e1e", fontFamily: "'Inter', sans-serif", fontSize: "0.9rem" }}>
+                <Typography sx={{ color: "#1e1e1e", fontFamily: "'Poppins', sans-serif", fontSize: "0.9rem" }}>
                   {item.line1}
                 </Typography>
-                <Typography sx={{ color: "#6b7280", fontFamily: "'Inter', sans-serif", fontSize: "0.85rem" }}>
+                <Typography sx={{ color: "#6b7280", fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
                   {item.line2}
                 </Typography>
               </Box>
@@ -173,7 +173,7 @@ export default function Contact() {
         >
           <Typography
             sx={{
-              fontFamily: "'Playfair Display', serif",
+              fontFamily: "'Poppins', sans-serif",
               fontWeight: 800,
               fontSize: "1.7rem",
               mb: 3,
@@ -192,7 +192,7 @@ export default function Contact() {
                 bgcolor: "#fff5ed",
                 border: "1px solid #ff5600",
                 "& .MuiAlert-icon": { color: "#ff5600" },
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
               }}
             >
               Thank you! Your message has been received. We will get back to you within 24 hours.
@@ -256,7 +256,7 @@ export default function Contact() {
                 fontWeight: 700,
                 fontSize: "1rem",
                 textTransform: "none",
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 boxShadow: "0 6px 20px rgba(255,86,0,0.35)",
                 alignSelf: "flex-start",
               }}
@@ -269,3 +269,4 @@ export default function Contact() {
     </div>
   );
 }
+

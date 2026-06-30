@@ -35,7 +35,7 @@ const features = [
     id: 4,
     icon: "./assets/images/cooking.png",
     title: "Quick & Reliable",
-    description: "Seamless service from reservation to the last bite — your time is always respected.",
+    description: "Seamless service from reservation to the last bite â€” your time is always respected.",
   },
 ];
 
@@ -83,7 +83,7 @@ export default function Discover() {
                 component={motion.h2}
                 variants={fadeUp}
                 sx={{
-                  fontFamily: "'Playfair Display', serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontWeight: 800,
                   fontSize: { xs: "2rem", md: "2.8rem" },
                   color: "#1e1e1e",
@@ -103,11 +103,11 @@ export default function Discover() {
                   color: "#6b7280",
                   mb: 5,
                   lineHeight: 1.85,
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontSize: "1rem",
                 }}
               >
-                At Savoria, we believe a great meal is more than food — it is a
+                At Savoria, we believe a great meal is more than food â€” it is a
                 shared experience. Every ingredient, every technique, every moment
                 at our table is crafted with care.
               </Typography>
@@ -151,13 +151,13 @@ export default function Discover() {
                           fontSize: "0.95rem",
                           mb: 0.4,
                           color: "#1e1e1e",
-                          fontFamily: "'Inter', sans-serif",
+                          fontFamily: "'Poppins', sans-serif",
                         }}
                       >
                         {feat.title}
                       </Typography>
                       <Typography
-                        sx={{ color: "#6b7280", fontSize: "0.875rem", lineHeight: 1.6, fontFamily: "'Inter', sans-serif" }}
+                        sx={{ color: "#6b7280", fontSize: "0.875rem", lineHeight: 1.6, fontFamily: "'Poppins', sans-serif" }}
                       >
                         {feat.description}
                       </Typography>
@@ -197,3 +197,4 @@ export default function Discover() {
     </Box>
   );
 }
+

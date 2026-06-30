@@ -22,10 +22,10 @@ export default function Aboutt() {
           Stay in the Loop
         </p>
         <h2 className="text-3xl md:text-4xl font-bold leading-snug mt-2 text-white"
-            style={{ fontFamily: "'Playfair Display', serif" }}>
+            style={{ fontFamily: "'Poppins', sans-serif" }}>
           Get Exclusive Offers<br />Delivered to You
         </h2>
-        <p className="mt-4 text-gray-200" style={{ fontFamily: "'Inter', sans-serif", lineHeight: 1.75 }}>
+        <p className="mt-4 text-gray-200" style={{ fontFamily: "'Poppins', sans-serif", lineHeight: 1.75 }}>
           Subscribe to our newsletter and be the first to know about seasonal
           menus, special events, and members-only promotions.
         </p>
@@ -35,11 +35,11 @@ export default function Aboutt() {
             type="email"
             placeholder="Your email address"
             className="px-4 py-3 w-full border-0 focus:outline-none text-gray-800"
-            style={{ fontFamily: "'Inter', sans-serif", fontSize: "0.95rem" }}
+            style={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.95rem" }}
           />
           <button
             className="bg-orange-500 text-white px-6 font-semibold hover:bg-orange-600 transition-colors duration-300 whitespace-nowrap"
-            style={{ fontFamily: "'Inter', sans-serif" }}
+            style={{ fontFamily: "'Poppins', sans-serif" }}
           >
             Subscribe
           </button>
@@ -48,3 +48,4 @@ export default function Aboutt() {
     </div>
   );
 }
+

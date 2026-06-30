@@ -125,7 +125,7 @@ export default function BookingForm() {
                 "&:hover": { bgcolor: "#e04a00" },
                 "&:disabled": { bgcolor: "#ccc" },
                 fontWeight: 700,
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 flex: 1,
                 minWidth: { xs: "100%", sm: "160px" },
                 height: "56px",
@@ -142,8 +142,8 @@ export default function BookingForm() {
         {/* Step 2: table selection */}
         {showCards && !confirmed && (
           <Box>
-            <Typography sx={{ mb: 3, fontFamily: "'Inter', sans-serif", color: "#6b7280", textAlign: "center" }}>
-              Choose your preferred table — {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}
+            <Typography sx={{ mb: 3, fontFamily: "'Poppins', sans-serif", color: "#6b7280", textAlign: "center" }}>
+              Choose your preferred table â€” {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}
             </Typography>
             <Box
               display="grid"
@@ -164,10 +164,10 @@ export default function BookingForm() {
                 >
                   <CardMedia component="img" image={table.img} alt={table.name} sx={{ aspectRatio: "4/3", objectFit: "cover" }} />
                   <CardContent>
-                    <Typography sx={{ fontFamily: "'Playfair Display', serif", fontWeight: 700, fontSize: "1rem", mb: 0.5 }}>
+                    <Typography sx={{ fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "1rem", mb: 0.5 }}>
                       {table.name}
                     </Typography>
-                    <Typography sx={{ color: "#6b7280", fontSize: "0.85rem", fontFamily: "'Inter', sans-serif" }}>
+                    <Typography sx={{ color: "#6b7280", fontSize: "0.85rem", fontFamily: "'Poppins', sans-serif" }}>
                       {table.description}
                     </Typography>
                   </CardContent>
@@ -175,8 +175,8 @@ export default function BookingForm() {
               ))}
             </Box>
             <Box sx={{ textAlign: "center", mt: 3 }}>
-              <Button onClick={handleReset} sx={{ color: "#6b7280", textTransform: "none", fontFamily: "'Inter', sans-serif" }}>
-                ← Start Over
+              <Button onClick={handleReset} sx={{ color: "#6b7280", textTransform: "none", fontFamily: "'Poppins', sans-serif" }}>
+                â† Start Over
               </Button>
             </Box>
           </Box>
@@ -192,7 +192,7 @@ export default function BookingForm() {
                 sx={{
                   borderRadius: "12px",
                   mb: 2,
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   bgcolor: "#fff5ed",
                   border: "1px solid #ff5600",
                   color: "#1e1e1e",
@@ -210,7 +210,7 @@ export default function BookingForm() {
                   borderColor: "#ff5600",
                   color: "#ff5600",
                   textTransform: "none",
-                  fontFamily: "'Inter', sans-serif",
+                  fontFamily: "'Poppins', sans-serif",
                   fontWeight: 600,
                   borderRadius: "10px",
                   px: 3,
@@ -226,3 +226,4 @@ export default function BookingForm() {
     </div>
   );
 }
+

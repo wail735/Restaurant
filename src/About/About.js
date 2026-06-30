@@ -76,7 +76,7 @@ export default function About() {
 
             <Typography
               sx={{
-                fontFamily: "'Playfair Display', serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontWeight: 800,
                 fontSize: { xs: "1.9rem", md: "2.6rem" },
                 lineHeight: 1.2,
@@ -88,7 +88,7 @@ export default function About() {
             </Typography>
 
             <Typography
-              sx={{ color: "#6b7280", mb: 2, lineHeight: 1.85, fontFamily: "'Inter', sans-serif" }}
+              sx={{ color: "#6b7280", mb: 2, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
               Founded in 2009, Savoria was born from a simple belief: that food
               should bring people together. Our kitchen blends time-honoured
@@ -97,9 +97,9 @@ export default function About() {
             </Typography>
 
             <Typography
-              sx={{ color: "#6b7280", mb: 4, lineHeight: 1.85, fontFamily: "'Inter', sans-serif" }}
+              sx={{ color: "#6b7280", mb: 4, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
-              Every recipe we serve carries the story of its origin — sourced from
+              Every recipe we serve carries the story of its origin â€” sourced from
               local farmers, prepared by passionate chefs, and presented to guests
               who deserve nothing less than the extraordinary.
             </Typography>
@@ -125,7 +125,7 @@ export default function About() {
                 >
                   <Typography
                     sx={{
-                      fontFamily: "'Playfair Display', serif",
+                      fontFamily: "'Poppins', sans-serif",
                       fontSize: "1.9rem",
                       fontWeight: 800,
                       color: "#ff5600",
@@ -136,7 +136,7 @@ export default function About() {
                     {s.value}
                   </Typography>
                   <Typography
-                    sx={{ color: "#6b7280", fontSize: "0.8rem", fontFamily: "'Inter', sans-serif" }}
+                    sx={{ color: "#6b7280", fontSize: "0.8rem", fontFamily: "'Poppins', sans-serif" }}
                   >
                     {s.label}
                   </Typography>
@@ -155,7 +155,7 @@ export default function About() {
                 py: 1.2,
                 textTransform: "none",
                 fontWeight: 600,
-                fontFamily: "'Inter', sans-serif",
+                fontFamily: "'Poppins', sans-serif",
                 fontSize: "0.95rem",
                 "&:hover": {
                   backgroundColor: "#ff5600",
@@ -172,3 +172,4 @@ export default function About() {
     </Container>
   );
 }
+

@@ -48,7 +48,7 @@ export default function Blog() {
         </Typography>
         <Typography
           sx={{
-            fontFamily: "'Playfair Display', serif",
+            fontFamily: "'Poppins', sans-serif",
             fontWeight: 800,
             fontSize: { xs: "1.9rem", md: "2.6rem" },
             color: "#1e1e1e",
@@ -102,14 +102,14 @@ export default function Blog() {
                     mb: 0.75,
                     letterSpacing: 1.5,
                     textTransform: "uppercase",
-                    fontFamily: "'Inter', sans-serif",
+                    fontFamily: "'Poppins', sans-serif",
                   }}
                 >
-                  {blog.category} &nbsp;·&nbsp; {blog.date}
+                  {blog.category} &nbsp;Â·&nbsp; {blog.date}
                 </Typography>
                 <Typography
                   sx={{
-                    fontFamily: "'Playfair Display', serif",
+                    fontFamily: "'Poppins', sans-serif",
                     fontWeight: 700,
                     fontSize: "1.05rem",
                     color: "#1e1e1e",
@@ -126,3 +126,4 @@ export default function Blog() {
     </div>
   );
 }
+
