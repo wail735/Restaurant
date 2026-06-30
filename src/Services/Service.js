@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material";
+﻿import { Box, Typography } from "@mui/material";
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
@@ -25,7 +25,7 @@ const services = [
     icon: "./assets/images/stir-fry.png",
     title: "Premium Quality Food",
     description:
-      "We partner with certified local producers to source only the freshest, seasonal ingredients â€” because great flavour starts long before the kitchen.",
+      "We partner with certified local producers to source only the freshest, seasonal ingredients Ã¢â‚¬â€ because great flavour starts long before the kitchen.",
   },
   {
     id: 3,
@@ -58,7 +58,7 @@ export default function Service() {
             mb: 8,
           }}
         >
-          Why Guests Choose Savoria
+          Why Guests Choose King Food
         </Typography>
       </motion.div>
 
@@ -131,4 +131,5 @@ export default function Service() {
     </div>
   );
 }
+
 

@@ -15,7 +15,7 @@ import {
 import MenuIcon from "@mui/icons-material/Menu";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 import ExpandLessIcon from "@mui/icons-material/ExpandLess";
-import { NavLink } from "react-router-dom";
+import { NavLink, Link } from "react-router-dom";
 import "../App.css";
 
 export default function NavBar() {
@@ -72,11 +72,11 @@ export default function NavBar() {
           <Box sx={{ display: "flex", alignItems: "center", gap: 1.5 }}>
             <img
               src="./assets/images/Food.png"
-              alt="Savoria Logo"
+              alt="King Food Logo"
               style={{ height: "44px", objectFit: "contain", cursor: "pointer" }}
             />
             <Typography
-              component={NavLink}
+              component={Link}
               to="/"
               sx={{
                 fontFamily: "'Poppins', sans-serif",
@@ -89,7 +89,7 @@ export default function NavBar() {
                 display: { xs: "none", sm: "block" },
               }}
             >
-              Savoria
+              King Food
             </Typography>
           </Box>
 
@@ -299,4 +299,5 @@ export default function NavBar() {
     </div>
   );
 }
+
 

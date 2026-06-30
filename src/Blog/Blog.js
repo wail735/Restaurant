@@ -1,4 +1,4 @@
-import { Typography } from "@mui/material";
+﻿import { Typography } from "@mui/material";
 import * as React from "react";
 import Card from "@mui/material/Card";
 import CardContent from "@mui/material/CardContent";
@@ -55,7 +55,7 @@ export default function Blog() {
             mb: 6,
           }}
         >
-          From the Savoria Kitchen
+          From the King Food Kitchen
         </Typography>
       </motion.div>
 
@@ -105,7 +105,7 @@ export default function Blog() {
                     fontFamily: "'Poppins', sans-serif",
                   }}
                 >
-                  {blog.category} &nbsp;Â·&nbsp; {blog.date}
+                  {blog.category} &nbsp;Ã‚Â·&nbsp; {blog.date}
                 </Typography>
                 <Typography
                   sx={{
@@ -126,4 +126,5 @@ export default function Blog() {
     </div>
   );
 }
+
 

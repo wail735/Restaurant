@@ -1,4 +1,4 @@
-import BookingForm from "./BookingForm";
+﻿import BookingForm from "./BookingForm";
 import { Box } from "@mui/material";
 import { useTheme, useMediaQuery } from "@mui/material";
 
@@ -15,7 +15,7 @@ export default function Section() {
       <Box
         component="img"
         src="./assets/images/section_bg04.png"
-        alt="Book a table at Savoria"
+        alt="Book a table at King Food"
         sx={{
           width: "100%",
           height: isMobile ? "auto" : "520px",
@@ -71,4 +71,5 @@ export default function Section() {
     </div>
   );
 }
+
 

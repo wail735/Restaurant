@@ -1,4 +1,4 @@
-import React from "react";
+﻿import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
@@ -63,7 +63,7 @@ export default function HeroSection() {
             className="section-label"
             sx={{ mb: 2, display: "block", color: "#ff5600", letterSpacing: 3 }}
           >
-            â€” Discover Your Taste
+            Ã¢â‚¬â€ Discover Your Taste
           </MotionTypography>
 
           <MotionTypography
@@ -92,7 +92,7 @@ export default function HeroSection() {
               fontFamily: "'Poppins', sans-serif",
             }}
           >
-            At Savoria, every plate tells a story â€” crafted from the finest
+            At King Food, every plate tells a story Ã¢â‚¬â€ crafted from the finest
             ingredients, cooked with passion, and served with warmth.
           </MotionTypography>
 
@@ -169,4 +169,5 @@ export default function HeroSection() {
     </Box>
   );
 }
+
 

@@ -1,4 +1,4 @@
-import { Typography, TextField, Button, Box, Alert, Collapse } from "@mui/material";
+﻿import { Typography, TextField, Button, Box, Alert, Collapse } from "@mui/material";
 import { Home, Phone, Email } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { useState } from "react";
@@ -17,18 +17,18 @@ const infoItems = [
     icon: <Home sx={{ color: "#ff5600", fontSize: 28 }} />,
     label: "Visit Us",
     line1: "12 Rue des Oliviers, Blida",
-    line2: "AlgÃ©rie, 09000",
+    line2: "AlgÃƒÂ©rie, 09000",
   },
   {
     icon: <Phone sx={{ color: "#ff5600", fontSize: 28 }} />,
     label: "Call Us",
     line1: "+213 25 30 40 50",
-    line2: "Mon â€“ Fri, 10 AM â€“ 10 PM",
+    line2: "Mon Ã¢â‚¬â€œ Fri, 10 AM Ã¢â‚¬â€œ 10 PM",
   },
   {
     icon: <Email sx={{ color: "#ff5600", fontSize: 28 }} />,
     label: "Email Us",
-    line1: "hello@savoria.dz",
+    line1: "hello@King Food.dz",
     line2: "We reply within 24 hours",
   },
 ];
@@ -61,7 +61,7 @@ export default function Contact() {
       {/* Hero */}
       <div className="relative w-full overflow-hidden" style={{ height: "260px" }}>
         <img
-          alt="Contact Savoria"
+          alt="Contact King Food"
           src="./assets/images/section_bg02.png"
           className="w-full h-full object-cover"
         />
@@ -159,7 +159,7 @@ export default function Contact() {
             allowFullScreen=""
             loading="lazy"
             referrerPolicy="no-referrer-when-downgrade"
-            title="Savoria Restaurant Location"
+            title="King Food Restaurant Location"
           />
         </motion.div>
 
@@ -269,4 +269,5 @@ export default function Contact() {
     </div>
   );
 }
+
 

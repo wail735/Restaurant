@@ -1,4 +1,4 @@
-import {
+﻿import {
   Box,
   Button,
   MenuItem,
@@ -143,7 +143,7 @@ export default function BookingForm() {
         {showCards && !confirmed && (
           <Box>
             <Typography sx={{ mb: 3, fontFamily: "'Poppins', sans-serif", color: "#6b7280", textAlign: "center" }}>
-              Choose your preferred table â€” {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}
+              Choose your preferred table Ã¢â‚¬â€ {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}
             </Typography>
             <Box
               display="grid"
@@ -176,7 +176,7 @@ export default function BookingForm() {
             </Box>
             <Box sx={{ textAlign: "center", mt: 3 }}>
               <Button onClick={handleReset} sx={{ color: "#6b7280", textTransform: "none", fontFamily: "'Poppins', sans-serif" }}>
-                â† Start Over
+                Ã¢â€ Â Start Over
               </Button>
             </Box>
           </Box>
@@ -201,7 +201,7 @@ export default function BookingForm() {
               >
                 <strong>Reservation confirmed!</strong> {selectedCard.name} on{" "}
                 {date?.format("MMM D, YYYY")} at {time?.format("h:mm A")} for {person} guest{person !== "1" ? "s" : ""}.
-                We look forward to seeing you at Savoria!
+                We look forward to seeing you at King Food!
               </Alert>
               <Button
                 onClick={handleReset}
@@ -226,4 +226,5 @@ export default function BookingForm() {
     </div>
   );
 }
+
 

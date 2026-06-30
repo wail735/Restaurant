@@ -1,4 +1,4 @@
-import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
+﻿import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
 import { Link } from "react-router-dom";
 import Instagramme from "./instagramme";
 
@@ -52,7 +52,7 @@ export default function Footer() {
               <Box sx={{ textAlign: { xs: "center", md: "left" }, maxWidth: 260 }}>
                 <Box sx={{ display: "flex", alignItems: "center", gap: 1.5, mb: 2, justifyContent: { xs: "center", md: "flex-start" } }}>
                   <img
-                    alt="Savoria Logo"
+                    alt="King Food Logo"
                     src="./assets/images/logo2_footer.png.webp"
                     style={{ maxWidth: "48px", width: "100%" }}
                   />
@@ -65,7 +65,7 @@ export default function Footer() {
                       letterSpacing: "0.5px",
                     }}
                   >
-                    Savoria
+                    King Food
                   </Typography>
                 </Box>
                 <Typography sx={{ color: "#aaa", fontSize: "0.875rem", lineHeight: 1.75, fontFamily: "'Poppins', sans-serif" }}>
@@ -190,10 +190,10 @@ export default function Footer() {
               sx={{ color: "#777", fontSize: "0.85rem", textAlign: "center", pb: 3 }}
             >
               <Typography sx={{ mb: { xs: 1.5, sm: 0 }, fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
-                &copy; {new Date().getFullYear()} Savoria Restaurant. All rights reserved.
+                &copy; {new Date().getFullYear()} King Food Restaurant. All rights reserved.
               </Typography>
               <Typography sx={{ fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
-                Crafted with <span style={{ color: "#ff5600" }}>â¤</span> for great dining experiences.
+                Crafted with <span style={{ color: "#ff5600" }}>Ã¢ÂÂ¤</span> for great dining experiences.
               </Typography>
             </Box>
           </Container>
@@ -202,4 +202,5 @@ export default function Footer() {
     </footer>
   );
 }
+
 

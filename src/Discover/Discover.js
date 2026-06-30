@@ -1,4 +1,4 @@
-import { Container, Typography, Box } from "@mui/material";
+﻿import { Container, Typography, Box } from "@mui/material";
 import { motion } from "framer-motion";
 
 const MotionBox = motion(Box);
@@ -35,7 +35,7 @@ const features = [
     id: 4,
     icon: "./assets/images/cooking.png",
     title: "Quick & Reliable",
-    description: "Seamless service from reservation to the last bite â€” your time is always respected.",
+    description: "Seamless service from reservation to the last bite Ã¢â‚¬â€ your time is always respected.",
   },
 ];
 
@@ -107,7 +107,7 @@ export default function Discover() {
                   fontSize: "1rem",
                 }}
               >
-                At Savoria, we believe a great meal is more than food â€” it is a
+                At King Food, we believe a great meal is more than food Ã¢â‚¬â€ it is a
                 shared experience. Every ingredient, every technique, every moment
                 at our table is crafted with care.
               </Typography>
@@ -197,4 +197,5 @@ export default function Discover() {
     </Box>
   );
 }
+
 

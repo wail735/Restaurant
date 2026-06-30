@@ -1,4 +1,4 @@
-import { Container, Typography, Box, Button } from "@mui/material";
+﻿import { Container, Typography, Box, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const fadeLeft = {
@@ -47,7 +47,7 @@ export default function About() {
           <Box
             component="img"
             src="./assets/images/about2.png.webp"
-            alt="About Savoria Restaurant"
+            alt="About King Food Restaurant"
             loading="lazy"
             sx={{
               width: "100%",
@@ -90,7 +90,7 @@ export default function About() {
             <Typography
               sx={{ color: "#6b7280", mb: 2, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
-              Founded in 2009, Savoria was born from a simple belief: that food
+              Founded in 2009, King Food was born from a simple belief: that food
               should bring people together. Our kitchen blends time-honoured
               Mediterranean traditions with modern culinary artistry, creating
               dishes that comfort the soul and delight the palate.
@@ -99,7 +99,7 @@ export default function About() {
             <Typography
               sx={{ color: "#6b7280", mb: 4, lineHeight: 1.85, fontFamily: "'Poppins', sans-serif" }}
             >
-              Every recipe we serve carries the story of its origin â€” sourced from
+              Every recipe we serve carries the story of its origin Ã¢â‚¬â€ sourced from
               local farmers, prepared by passionate chefs, and presented to guests
               who deserve nothing less than the extraordinary.
             </Typography>
@@ -172,4 +172,5 @@ export default function About() {
     </Container>
   );
 }
+
 
