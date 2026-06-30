@@ -4,7 +4,6 @@ import { useTheme } from "@mui/material";
 
 export default function Aboutt() {
   const { t } = useTranslation();
-  const theme = useTheme();
 
   return (
     <div
