@@ -1,4 +1,4 @@
-﻿import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
+import { Box, Container, Typography, Link as MuiLink } from "@mui/material";
 import { Link } from "react-router-dom";
 import Instagramme from "./instagramme";
 

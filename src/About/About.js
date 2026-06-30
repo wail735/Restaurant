@@ -1,4 +1,4 @@
-﻿import { Container, Typography, Box, Button } from "@mui/material";
+import { Container, Typography, Box, Button } from "@mui/material";
 import { motion } from "framer-motion";
 
 const fadeLeft = {

@@ -1,4 +1,4 @@
-﻿import React from "react";
+import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { motion } from "framer-motion";
 import { useNavigate } from "react-router-dom";
