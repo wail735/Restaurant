@@ -1,30 +1,34 @@
-import { Box } from "@mui/material";
+import { Box, Typography, useTheme } from "@mui/material";
 import { motion, AnimatePresence } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const MotionBox = motion(Box);
 
 export default function Properties({ activeCategory }) {
+  const { t } = useTranslation();
+  const theme = useTheme();
+
   const data = {
-    Special: [
+    special: [
       { id: 1, image: "/assets/images/special-01.jpg" },
       { id: 2, image: "/assets/images/Special-02.jpg" },
       { id: 3, image: "/assets/images/special-03.jpg" },
       { id: 4, image: "/assets/images/special-04.jpg" },
     ],
-    Lunch: [
+    lunch: [
       { id: 1, image: "/assets/images/lunch-01.jpg" },
       { id: 2, image: "/assets/images/lunch-02.webp" },
       { id: 3, image: "/assets/images/lunch-03.jpg" },
       { id: 4, image: "/assets/images/lunch-04.webp" },
     ],
-    Breakfast: [
+    breakfast: [
       { id: 1, image: "/assets/images/break-01.webp" },
       { id: 2, image: "/assets/images/break-02.jpg" },
       { id: 3, image: "/assets/images/break-03.jpeg" },
       { id: 4, image: "/assets/images/break-04.jpeg" },
     ],
-    Dinner: [
+    dinner: [
       { id: 1, image: "/assets/images/dinner-01.webp" },
       { id: 2, image: "/assets/images/dinner-02.jpeg" },
       { id: 3, image: "/assets/images/dinner-03.jpg" },
@@ -34,38 +38,18 @@ export default function Properties({ activeCategory }) {
 
   const [hoveredIndex, setHoveredIndex] = useState(null);
 
-  const handleMouseEnter = (index) => {
-    setHoveredIndex(index);
-  };
-
-  const handleMouseLeave = () => {
-    setHoveredIndex(null);
-  };
-
   const renderImage = (item, index) => (
     <Box
       key={index}
-      sx={{
-        position: "relative",
-        width: "100%",
-        height: "100%",
-        overflow: "hidden",
-        cursor: "pointer",
-      }}
-      onMouseEnter={() => handleMouseEnter(index)}
-      onMouseLeave={handleMouseLeave}
+      sx={{ position: "relative", width: "100%", height: "100%", overflow: "hidden", cursor: "pointer" }}
+      onMouseEnter={() => setHoveredIndex(index)}
+      onMouseLeave={() => setHoveredIndex(null)}
     >
       <MotionBox
         component="img"
         src={item.image}
-        alt={`img${index + 1}`}
-        sx={{
-          width: "100%",
-          height: "100%",
-          objectFit: "cover",
-          boxShadow: 3,
-          transition: "transform 0.3s ease-in-out",
-        }}
+        alt={`food-${index + 1}`}
+        sx={{ width: "100%", height: "100%", objectFit: "cover", boxShadow: 3, transition: "transform 0.3s ease-in-out" }}
         whileHover={{ scale: 1.05 }}
       />
 
@@ -77,22 +61,26 @@ export default function Properties({ activeCategory }) {
             exit={{ opacity: 0 }}
             transition={{ duration: 0.3 }}
             style={{
-              position: "absolute",
-              inset: 0,
-              background: "rgba(0,0,0,0.5)",
-              color: "#fff",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              textAlign: "center",
+              position: "absolute", inset: 0,
+              background: "rgba(0,0,0,0.6)",
+              color: "#fff", display: "flex",
+              flexDirection: "column", justifyContent: "center",
+              alignItems: "center", textAlign: "center", padding: "16px",
             }}
           >
-            <h2 style={{ color: "#ff5600" , fontSize:"25px"}}>25$</h2>
-            <p style={{fontSize:"42px"}}>Delicious Food </p>
-            <p style={{fontSize:"12px"}}>Ut enim ad minim veniam quis nostr.</p>
-            <button className="bg-orange-600 p-4 m-2 rounded-md hover:bg-orange-400">
-              Order Now
+            <Typography sx={{ color: "#ff5600", fontSize: "1.6rem", fontWeight: 800, fontFamily: "'Poppins', sans-serif", mb: 0.5 }}>25$</Typography>
+            <Typography sx={{ fontSize: "1.2rem", fontWeight: 700, fontFamily: "'Poppins', sans-serif", mb: 0.5 }}>{t('food_title')}</Typography>
+            <Typography sx={{ fontSize: "0.8rem", color: "rgba(255,255,255,0.8)", fontFamily: "'Poppins', sans-serif", mb: 1.5 }}>{t('food_desc')}</Typography>
+            <button
+              style={{
+                background: "#ff5600", color: "#fff", border: "none",
+                padding: "10px 24px", borderRadius: "8px", cursor: "pointer",
+                fontFamily: "'Poppins', sans-serif", fontWeight: 700, fontSize: "0.9rem",
+              }}
+              onMouseOver={(e) => e.target.style.background = "#e04a00"}
+              onMouseOut={(e) => e.target.style.background = "#ff5600"}
+            >
+              {t('btn_order')}
             </button>
           </motion.div>
         )}
@@ -101,7 +89,7 @@ export default function Properties({ activeCategory }) {
   );
 
   return (
-    <Box sx={{ py: 1 }}>
+    <Box sx={{ py: 1, bgcolor: theme.palette.background.default }}>
       <AnimatePresence mode="wait">
         <motion.div
           key={activeCategory}
@@ -110,48 +98,16 @@ export default function Properties({ activeCategory }) {
           exit={{ opacity: 0, y: -20 }}
           transition={{ duration: 0.5 }}
         >
-          <Box
-            sx={{
-              display: "flex",
-              flexDirection: { xs: "column", md: "row" },
-              gap: 1,
-            }}
-          >
-            {/* Image 1 */}
-            <Box
-              sx={{
-                width: { xs: "100%", md: "33.33%" },
-                height: { xs: 200, md: 400 },
-              }}
-            >
+          <Box sx={{ display: "flex", flexDirection: { xs: "column", md: "row" }, gap: 1 }}>
+            <Box sx={{ width: { xs: "100%", md: "33.33%" }, height: { xs: 200, md: 400 } }}>
               {renderImage(data[activeCategory][0], 0)}
             </Box>
-
-            {/* Image 2 */}
-            <Box
-              sx={{
-                width: { xs: "100%", md: "33.33%" },
-                height: { xs: 200, md: 400 },
-              }}
-            >
+            <Box sx={{ width: { xs: "100%", md: "33.33%" }, height: { xs: 200, md: 400 } }}>
               {renderImage(data[activeCategory][1], 1)}
             </Box>
-
-            {/* Column with image 3 and 4 */}
-            <Box
-              sx={{
-                width: { xs: "100%", md: "33.33%" },
-                display: "flex",
-                flexDirection: "column",
-                gap: 1,
-              }}
-            >
-              <Box sx={{ height: { xs: 200, md: 195 } }}>
-                {renderImage(data[activeCategory][2], 2)}
-              </Box>
-              <Box sx={{ height: { xs: 200, md: 195 } }}>
-                {renderImage(data[activeCategory][3], 3)}
-              </Box>
+            <Box sx={{ width: { xs: "100%", md: "33.33%" }, display: "flex", flexDirection: "column", gap: 1 }}>
+              <Box sx={{ height: { xs: 200, md: 195 } }}>{renderImage(data[activeCategory][2], 2)}</Box>
+              <Box sx={{ height: { xs: 200, md: 195 } }}>{renderImage(data[activeCategory][3], 3)}</Box>
             </Box>
           </Box>
         </motion.div>

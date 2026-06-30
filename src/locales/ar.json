@@ -97,6 +97,15 @@
     "err_name": "الاسم مطلوب",
     "err_email": "بريد إلكتروني صحيح مطلوب",
     "err_subject": "الموضوع مطلوب",
-    "err_message": "الرسالة مطلوبة"
+    "err_message": "الرسالة مطلوبة",
+    "menu_label": "قائمتنا",
+    "menu_title": "أطباق رائجة وشهيرة",
+    "cat_special": "مميز",
+    "cat_lunch": "غداء",
+    "cat_breakfast": "إفطار",
+    "cat_dinner": "عشاء",
+    "food_title": "طعام لذيذ",
+    "food_desc": "طازج، شهي، ومُعدّ بعناية فائقة.",
+    "btn_order": "اطلب الآن"
   }
 }

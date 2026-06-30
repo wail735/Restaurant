@@ -97,6 +97,15 @@
     "err_name": "Le nom est requis",
     "err_email": "Un email valide est requis",
     "err_subject": "Le sujet est requis",
-    "err_message": "Le message est requis"
+    "err_message": "Le message est requis",
+    "menu_label": "Notre Menu",
+    "menu_title": "Plats Tendance et Populaires",
+    "cat_special": "Spécial",
+    "cat_lunch": "Déjeuner",
+    "cat_breakfast": "Petit-Déjeuner",
+    "cat_dinner": "Dîner",
+    "food_title": "Repas Délicieux",
+    "food_desc": "Frais, savoureux et préparé avec soin.",
+    "btn_order": "Commander"
   }
 }

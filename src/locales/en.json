@@ -97,6 +97,15 @@
     "err_name": "Name is required",
     "err_email": "Valid email is required",
     "err_subject": "Subject is required",
-    "err_message": "Message is required"
+    "err_message": "Message is required",
+    "menu_label": "Our Offered Menu",
+    "menu_title": "Trendy & Popular Dishes",
+    "cat_special": "Special",
+    "cat_lunch": "Lunch",
+    "cat_breakfast": "Breakfast",
+    "cat_dinner": "Dinner",
+    "food_title": "Delicious Food",
+    "food_desc": "Fresh, flavourful and crafted with care.",
+    "btn_order": "Order Now"
   }
 }
