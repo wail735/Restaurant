@@ -1,7 +1,8 @@
-import { Typography, TextField, Button, Box, Alert, Collapse } from "@mui/material";
+import { Typography, TextField, Button, Box, Alert, Collapse, useTheme } from "@mui/material";
 import { Home, Phone, Email } from "@mui/icons-material";
 import { motion } from "framer-motion";
 import { useState } from "react";
+import { useTranslation } from "react-i18next";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 28 },
@@ -12,38 +13,40 @@ const fadeUp = {
   }),
 };
 
-const infoItems = [
-  {
-    icon: <Home sx={{ color: "#ff5600", fontSize: 28 }} />,
-    label: "Visit Us",
-    line1: "12 Rue des Oliviers, Blida",
-    line2: "AlgÃƒÂ©rie, 09000",
-  },
-  {
-    icon: <Phone sx={{ color: "#ff5600", fontSize: 28 }} />,
-    label: "Call Us",
-    line1: "+213 25 30 40 50",
-    line2: "Mon Ã¢â‚¬â€œ Fri, 10 AM Ã¢â‚¬â€œ 10 PM",
-  },
-  {
-    icon: <Email sx={{ color: "#ff5600", fontSize: 28 }} />,
-    label: "Email Us",
-    line1: "hello@King Food.dz",
-    line2: "We reply within 24 hours",
-  },
-];
-
 export default function Contact() {
+  const { t } = useTranslation();
+  const theme = useTheme();
   const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
   const [submitted, setSubmitted] = useState(false);
   const [errors, setErrors] = useState({});
 
+  const infoItems = [
+    {
+      icon: <Home sx={{ color: "#ff5600", fontSize: 28 }} />,
+      label: t('contact_visit'),
+      line1: "12 Rue des Oliviers, Blida",
+      line2: "Algerie, 09000",
+    },
+    {
+      icon: <Phone sx={{ color: "#ff5600", fontSize: 28 }} />,
+      label: t('contact_call'),
+      line1: "+213 25 30 40 50",
+      line2: t('contact_hours'),
+    },
+    {
+      icon: <Email sx={{ color: "#ff5600", fontSize: 28 }} />,
+      label: t('contact_email_lbl'),
+      line1: "hello@kingfood.dz",
+      line2: t('contact_reply'),
+    },
+  ];
+
   const validate = () => {
     const e = {};
-    if (!form.name.trim()) e.name = "Name is required";
-    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = "Valid email is required";
-    if (!form.subject.trim()) e.subject = "Subject is required";
-    if (!form.message.trim()) e.message = "Message is required";
+    if (!form.name.trim()) e.name = t('err_name');
+    if (!form.email.trim() || !/\S+@\S+\.\S+/.test(form.email)) e.email = t('err_email');
+    if (!form.subject.trim()) e.subject = t('err_subject');
+    if (!form.message.trim()) e.message = t('err_message');
     return e;
   };
 
@@ -57,7 +60,7 @@ export default function Contact() {
   };
 
   return (
-    <div>
+    <div style={{ backgroundColor: theme.palette.background.default, minHeight: "100vh" }}>
       {/* Hero */}
       <div className="relative w-full overflow-hidden" style={{ height: "260px" }}>
         <img
@@ -71,7 +74,7 @@ export default function Contact() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            <p className="section-label" style={{ color: "#ff5600", marginBottom: 8 }}>Get in Touch</p>
+            <p className="section-label" style={{ color: "#ff5600", marginBottom: 8 }}>{t('contact_hero_label')}</p>
             <h1
               style={{
                 fontFamily: "'Poppins', sans-serif",
@@ -82,7 +85,7 @@ export default function Contact() {
                 lineHeight: 1.15,
               }}
             >
-              Contact Us
+              {t('contact_hero_title')}
             </h1>
           </motion.div>
         </div>
@@ -97,7 +100,7 @@ export default function Contact() {
           gap: 3,
           px: { xs: 3, md: 8 },
           py: 6,
-          bgcolor: "#fffbf7",
+          bgcolor: theme.palette.background.default,
         }}
       >
         {infoItems.map((item, i) => (
@@ -117,24 +120,22 @@ export default function Contact() {
                 gap: 2,
                 p: 3,
                 borderRadius: "14px",
-                bgcolor: "#fff",
+                bgcolor: theme.palette.background.paper,
                 boxShadow: "0 4px 16px rgba(0,0,0,0.06)",
-                border: "1px solid rgba(0,0,0,0.06)",
+                border: `1px solid ${theme.palette.divider}`,
                 transition: "box-shadow 0.3s ease",
                 "&:hover": { boxShadow: "0 8px 28px rgba(255,86,0,0.12)" },
               }}
             >
               <Box sx={{ mt: 0.3 }}>{item.icon}</Box>
               <Box>
-                <Typography
-                  sx={{ fontWeight: 700, fontFamily: "'Poppins', sans-serif", fontSize: "1rem", mb: 0.3 }}
-                >
+                <Typography sx={{ fontWeight: 700, fontFamily: "'Poppins', sans-serif", fontSize: "1rem", mb: 0.3, color: theme.palette.text.primary }}>
                   {item.label}
                 </Typography>
-                <Typography sx={{ color: "#1e1e1e", fontFamily: "'Poppins', sans-serif", fontSize: "0.9rem" }}>
+                <Typography sx={{ color: theme.palette.text.primary, fontFamily: "'Poppins', sans-serif", fontSize: "0.9rem" }}>
                   {item.line1}
                 </Typography>
-                <Typography sx={{ color: "#6b7280", fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
+                <Typography sx={{ color: theme.palette.text.secondary, fontFamily: "'Poppins', sans-serif", fontSize: "0.85rem" }}>
                   {item.line2}
                 </Typography>
               </Box>
@@ -177,10 +178,10 @@ export default function Contact() {
               fontWeight: 800,
               fontSize: "1.7rem",
               mb: 3,
-              color: "#1e1e1e",
+              color: theme.palette.text.primary,
             }}
           >
-            Send Us a Message
+            {t('contact_form_title')}
           </Typography>
 
           <Collapse in={submitted}>
@@ -189,19 +190,20 @@ export default function Contact() {
               sx={{
                 mb: 3,
                 borderRadius: "12px",
-                bgcolor: "#fff5ed",
+                bgcolor: theme.palette.mode === 'dark' ? "rgba(255,86,0,0.1)" : "#fff5ed",
                 border: "1px solid #ff5600",
                 "& .MuiAlert-icon": { color: "#ff5600" },
                 fontFamily: "'Poppins', sans-serif",
+                color: theme.palette.text.primary,
               }}
             >
-              Thank you! Your message has been received. We will get back to you within 24 hours.
+              {t('contact_success')}
             </Alert>
           </Collapse>
 
           <Box component="form" onSubmit={handleSubmit} className="flex flex-col gap-4">
             <TextField
-              label="Your Name"
+              label={t('contact_name')}
               variant="outlined"
               fullWidth
               value={form.name}
@@ -211,7 +213,7 @@ export default function Contact() {
               sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
             />
             <TextField
-              label="Your Email"
+              label={t('contact_email_field')}
               type="email"
               variant="outlined"
               fullWidth
@@ -222,7 +224,7 @@ export default function Contact() {
               sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
             />
             <TextField
-              label="Subject"
+              label={t('contact_subject')}
               variant="outlined"
               fullWidth
               value={form.subject}
@@ -232,7 +234,7 @@ export default function Contact() {
               sx={{ "& .MuiOutlinedInput-root": { borderRadius: "10px" } }}
             />
             <TextField
-              label="Your Message"
+              label={t('contact_message')}
               variant="outlined"
               multiline
               rows={5}
@@ -261,7 +263,7 @@ export default function Contact() {
                 alignSelf: "flex-start",
               }}
             >
-              Send Message
+              {t('contact_send')}
             </Button>
           </Box>
         </motion.div>
@@ -269,5 +271,3 @@ export default function Contact() {
     </div>
   );
 }
-
-

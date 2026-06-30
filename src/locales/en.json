@@ -79,6 +79,24 @@
     "address_lbl": "Address",
     "phone_lbl": "Phone",
     "email_lbl": "Email",
-    "rights": "All rights reserved"
+    "rights": "All rights reserved",
+    "contact_hero_label": "Get in Touch",
+    "contact_hero_title": "Contact Us",
+    "contact_visit": "Visit Us",
+    "contact_call": "Call Us",
+    "contact_hours": "Mon – Fri, 10 AM – 10 PM",
+    "contact_email_lbl": "Email Us",
+    "contact_reply": "We reply within 24 hours",
+    "contact_form_title": "Send Us a Message",
+    "contact_success": "Thank you! Your message has been received. We will get back to you within 24 hours.",
+    "contact_name": "Your Name",
+    "contact_email_field": "Your Email",
+    "contact_subject": "Subject",
+    "contact_message": "Your Message",
+    "contact_send": "Send Message",
+    "err_name": "Name is required",
+    "err_email": "Valid email is required",
+    "err_subject": "Subject is required",
+    "err_message": "Message is required"
   }
 }

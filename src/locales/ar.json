@@ -79,6 +79,24 @@
     "address_lbl": "العنوان",
     "phone_lbl": "الهاتف",
     "email_lbl": "البريد الإلكتروني",
-    "rights": "جميع الحقوق محفوظة"
+    "rights": "جميع الحقوق محفوظة",
+    "contact_hero_label": "تواصل معنا",
+    "contact_hero_title": "اتصل بنا",
+    "contact_visit": "قم بزيارتنا",
+    "contact_call": "اتصل بنا",
+    "contact_hours": "الإثنين – الجمعة، 10ص – 10م",
+    "contact_email_lbl": "راسلنا",
+    "contact_reply": "نرد خلال 24 ساعة",
+    "contact_form_title": "أرسل لنا رسالة",
+    "contact_success": "شكراً! تم استلام رسالتك. سنتواصل معك خلال 24 ساعة.",
+    "contact_name": "اسمك",
+    "contact_email_field": "بريدك الإلكتروني",
+    "contact_subject": "الموضوع",
+    "contact_message": "رسالتك",
+    "contact_send": "إرسال الرسالة",
+    "err_name": "الاسم مطلوب",
+    "err_email": "بريد إلكتروني صحيح مطلوب",
+    "err_subject": "الموضوع مطلوب",
+    "err_message": "الرسالة مطلوبة"
   }
 }

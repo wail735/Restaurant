@@ -79,6 +79,24 @@
     "address_lbl": "Adresse",
     "phone_lbl": "Téléphone",
     "email_lbl": "Email",
-    "rights": "Tous droits réservés"
+    "rights": "Tous droits réservés",
+    "contact_hero_label": "Nous Contacter",
+    "contact_hero_title": "Contactez-Nous",
+    "contact_visit": "Nous Rendre Visite",
+    "contact_call": "Nous Appeler",
+    "contact_hours": "Lun – Ven, 10h – 22h",
+    "contact_email_lbl": "Nous Écrire",
+    "contact_reply": "Nous répondons sous 24h",
+    "contact_form_title": "Envoyez-Nous un Message",
+    "contact_success": "Merci ! Votre message a bien été reçu. Nous vous répondrons sous 24 heures.",
+    "contact_name": "Votre Nom",
+    "contact_email_field": "Votre Email",
+    "contact_subject": "Sujet",
+    "contact_message": "Votre Message",
+    "contact_send": "Envoyer le Message",
+    "err_name": "Le nom est requis",
+    "err_email": "Un email valide est requis",
+    "err_subject": "Le sujet est requis",
+    "err_message": "Le message est requis"
   }
 }
